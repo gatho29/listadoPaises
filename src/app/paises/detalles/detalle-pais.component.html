@@ -1,0 +1,14 @@
+<div class="contenedor-completo">
+    <div class="contenedor-contenido">
+        <div class="bandera-casilla">
+            <img [src]="pais.flag" class="bandera-img" width="300px" height="200px">
+        </div>
+        <div class="contenido-cuerpo">
+            <div> Nombre del pais: {{ pais.name }} </div>
+            <div> Su capital: {{ pais.capital }}</div>
+            <div> Su region: {{ pais.region }} </div>
+            <div> El Lenguaje nativo es: {{ pais.nativeName }}</div>
+        </div>
+        <button class="contenedor-boton" routerLink="/listado-paises">Regresar al inicio</button>
+    </div>
+</div>

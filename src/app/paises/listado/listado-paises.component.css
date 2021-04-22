@@ -1,0 +1,71 @@
+.contenedor {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.contenedor-cuerpo {
+    margin: auto;
+    height: 400px;
+    text-align: center;
+    width: 50%;
+    max-height: 350px;
+    border-radius: 0 0 8px 8px;
+    background-color: #F4F6F6;
+    overflow-y: scroll;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.cabecera {
+    margin: auto;
+    background-color: #AED6F1;
+    border-radius: 8px 8px 0 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    height: 40px;
+    width: 50%;
+}
+
+.cuerpo {
+    margin-top: 1rem;
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+}
+
+.bandera-casilla {
+    width: 10%;
+}
+
+.bandera-img {
+    border-radius: 40%;
+}
+
+.nombre {
+    width: 25%;
+    flex-wrap: wrap;
+}
+
+.capital {
+    width: 12%;
+    flex-wrap: wrap;
+}
+
+.region {
+    width: 15%;
+    flex-wrap: wrap;
+}
+
+.idioma {
+    width: 15%;
+    flex-wrap: wrap;
+}
+
+.contenedor-boton {
+    margin-top: 1rem;
+    text-align: center;
+}

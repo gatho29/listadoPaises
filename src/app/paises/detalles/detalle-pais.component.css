@@ -1,0 +1,41 @@
+.contenedor-completo {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contenedor-contenido {
+    border-radius: 10px;
+    text-align: center;
+    background-color: #E5E8E8;
+    width: 50%;
+    height: 430px;
+    font-size: 24px;
+}
+
+.bandera-img {
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.contenido-cuerpo {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contenedor-boton {
+    background-color: #AED6F1;
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #212F3D;
+}
+
+.contenedor-boton:active {
+    background-color: #48C9B0;
+    color: white;
+}
