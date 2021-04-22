@@ -1,17 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Paises } from '../interfaces/paises';
+import { Pais } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListadoPaisesService {
 
+  paisSeleccionado: Pais;
+
   constructor(private http: HttpClient) { }
 
-  obtenerPaises(): Observable<Paises[]> {
-    return this.http.get<Paises[]>('https://restcountries.eu/rest/v2/all');
+  obtenerPaises(): Observable<Pais[]> {
+    return this.http.get<Pais[]>('https://restcountries.eu/rest/v2/all');
   }
 
 }

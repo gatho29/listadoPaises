@@ -23,7 +23,4 @@ export class BuscadorComponent implements OnInit {
       .pipe(debounceTime(300))
       .subscribe(value => this.buscadorEmittter.emit(value));
   }
-
-
-
 }

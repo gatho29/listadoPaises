@@ -7,24 +7,27 @@ import { BuscadorComponent } from './buscador/buscador.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
 import { BusquedaPipe } from '../pipes/busqueda.pipe';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
-    BusquedaPipe,
     DetallePaisComponent,
     ListadoPaisesComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    BusquedaPipe
   ],
   imports: [
     CommonModule,
     PaisesRoutingModule,
     RouterModule,
     ComponentsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  exports:[
+  exports: [
     DetallePaisComponent,
     ListadoPaisesComponent,
-    BuscadorComponent
-  ], providers: [BusquedaPipe]
+    BuscadorComponent,
+    BusquedaPipe
+  ]
 })
 export class PaisesModule { }

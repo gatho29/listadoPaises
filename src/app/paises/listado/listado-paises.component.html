@@ -1,3 +1,5 @@
+<app-buscador (buscador)="obtenerPaisAFiltrar($event)"></app-buscador>
+
 <div class="contenedor">
     <div class="cabecera">
         <div class="bandera">Bandera</div>
@@ -7,7 +9,7 @@
         <div class="idioma">Idioma</div>
     </div>
     <div class="contenedor-cuerpo">
-        <div *ngFor="let pais of paises | busqueda:filtroValor" class="cuerpo" (click)="detalleDelPais(pais)">
+        <div *ngFor="let pais of paises | busqueda:filtroValor" class="cuerpo" (click)="verDetallePais(pais)">
             <div class="bandera-casilla">
                 <img [src]="pais.flag" class="bandera-img" width="80" height="40">
             </div>
@@ -17,6 +19,4 @@
             <div class="idioma">{{pais.nativeName}}</div>
         </div>
     </div>
-    <!-- <app-boton nombre="Buscar"></app-boton> -->
 </div>
-<!-- <app-buscador (buscador)="obtenerPaisAFiltrar($event)"></app-buscador> -->

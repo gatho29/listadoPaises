@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListadoPaisesService } from '../../services/paises.service';
-import { Paises } from '../../interfaces/paises';
+import { Pais } from '../../interfaces/interfaces';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-listado-paises',
   templateUrl: './listado-paises.component.html',
@@ -10,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ListadoPaisesComponent implements OnInit {
 
-  paises: Paises[] = [];
+  paises: Pais[] = [];
   filtroValor = '';
 
   constructor(
@@ -23,15 +22,15 @@ export class ListadoPaisesComponent implements OnInit {
 
   obtenerPaises() {
     this.serviciosPaises.obtenerPaises().subscribe(
-      respuesta => this.paises = respuesta,
+      paises => this.paises = paises,
       error => console.log(error)
     );
   }
 
-  // detalleDelPais(pais: Paises) {
-  //   this.serviciosPaises.pais = pais
-  //   this.ruta.navigateByUrl('/detalle-pais');
-  // }
+  verDetallePais(pais: Pais) {
+    this.serviciosPaises.paisSeleccionado = pais;
+    this.ruta.navigateByUrl('/detalles');
+  }
 
   obtenerPaisAFiltrar(value: string) {
     this.filtroValor = value;

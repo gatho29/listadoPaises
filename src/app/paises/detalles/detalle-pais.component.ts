@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Paises } from '../../interfaces/paises';
 import { ListadoPaisesService } from '../../services/paises.service';
-
+import { Pais } from '../../interfaces/interfaces';
 @Component({
   selector: 'app-detalle-pais',
   templateUrl: './detalle-pais.component.html',
@@ -9,7 +8,7 @@ import { ListadoPaisesService } from '../../services/paises.service';
 })
 export class DetallePaisComponent implements OnInit {
 
-  pais: Paises;
+  pais: Pais;
 
   constructor(private serviciosPaises: ListadoPaisesService) { }
 
@@ -18,7 +17,7 @@ export class DetallePaisComponent implements OnInit {
   }
 
   mostrarDetallePais() {
-    // this.pais = this.serviciosPaises.pais;
+    this.pais = this.serviciosPaises.paisSeleccionado;
   }
 
 }

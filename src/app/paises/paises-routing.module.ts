@@ -5,8 +5,8 @@ import { ListadoPaisesComponent } from './listado/listado-paises.component';
 
 const routes: Routes = [
   { path: '', component: ListadoPaisesComponent },
-  { path: 'listado-paises', component: ListadoPaisesComponent },
-  { path: 'detalle-pais', component: DetallePaisComponent }
+  { path: 'paises', component: ListadoPaisesComponent },
+  { path: 'detalles', component: DetallePaisComponent }
 ];
 
 @NgModule({
